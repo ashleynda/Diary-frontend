@@ -1,0 +1,98 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.head {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: -20px;
+    line-height: 24px;
+    font-style: normal;
+}
+.vertical-line {
+    border: none; /* Removes default border */
+    height: 2px; /* Height of the line */
+    background-color: black; /* Color of the line */
+    margin: 20px 0; 
+}
+/* .functions {
+     
+} */
+.p {
+    color: blue;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: oblique;
+    line-height: 24px;
+    background-color: white;
+    border: none;
+}
+.line {
+    border-right: 4px solid black;
+    height: 800px;
+    width: 2%;
+    margin-top: -700px;
+    margin-left: 200px;
+    /* float: right; */
+}
+.text1 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 570px;
+}
+.create-entry {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+#title-entry {
+    margin-bottom: 30px;
+    padding: 10px 10px;
+}
+
+.createNewEntry-button {
+    background-color: blueviolet;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 150px;
+    display: flex;
+   
+}
+.find-entry {
+    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.findEntry-button {
+    background-color: blueviolet;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 150px;
+}
+.delete-entry {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.deleteEntry-button {
+    background-color: blueviolet;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 150px;
+}

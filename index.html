@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Diary</title>
+</head>
+<!-- onclick="register()" -->
+<body>
+    <section class="holder">
+        <div id="first-div">
+            <button class="log" id="log">Login</button>
+            <button class="sign" id="sign" >Sign up</button>
+        </div>
+        <div class="first-div_1">
+            <div class="dia-name">
+                <h1 class="name">Secrets</h1>
+                <p class="aim">A safe place to document your thoughts</p>
+            </div>
+            <div class="diary">
+                <img class="diary-pic" src="assets/alysha-rosly-6GZQo28ecoE-unsplash.jpg" alt="">
+            </div>
+        </div>
+
+
+        <div class="register" id="register">
+            <h4 id="signup-response"></h4>
+            <form class="signup" method="post" id="signup">
+                
+                <input type="email" name="signup_input" id="email" class="signup-input" placeholder="Enter your email address" required>
+                <input type="password" name="signup_input" id="password" class="signup-input" placeholder="Enter your password" required>
+
+                <button class="signup-submit" id="form" type="submit">
+                    <span class="button-text">Sign up</span>
+                </button>
+
+
+                <div class="already">
+                <p class="already1">Already have an account?</p>
+                <button class="login-submit" id="login_submit" type="submit">
+                    <span class="button_text2">Login</span>
+                </button>                
+                </div>
+            </form>
+        </div>
+
+        <div class="registered" id="registered">
+            <h4 id="login"></h4>
+            <!-- <div class="cancel"><button id="cancel-login">&times</button></div> -->
+            <form class="login" method="post" id="login" required>
+                <input type="email" name="signup_input" id="email-login" class="login-input" placeholder="Enter your email address" required>
+                <input type="password" name="signup_input" id="password-login" class="login-input" placeholder="Enter your password" required>
+
+                <div class="forgot">
+                    <div class="check">
+                        <label class="container">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <p>Remember Me?</p>
+                    </div>
+                <button class="login_submit1" id="form1" type="submit">Login</button>  
+                <p>Forgot password ?</p>      
+            </form>
+        </div>
+        
+    </section> 
+    <script src="index.js"></script>
+</body>
+</html>

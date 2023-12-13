@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="page">
+        <div class="header">
+            <h1 class="head">Dashboard</h1>
+            <div>
+                <button class="log-out" id="logout">
+                    <img src="" alt="">Logout
+                </button>
+            </div>
+        </div>
+        <hr class="vertical-line">
+
+
+        <div class="text1">
+            <div class="functions">
+                <div class="func1" id="func1-part">
+                    <img src="assets/icons8-create-100.png" alt="">
+                    <button class="p" id="createNewEntry-button">Create Entry</button>
+                </div>
+
+                <div class="func1">
+                    <img src="assets/icons8-update-file-100.png" alt="">
+                    <button class="p" id="updateEntry-button">Update Entry</button>
+                </div>
+
+                <div class="func1">
+                    <img src="assets/icons8-find-100.png" alt="">
+                    <button class="p" id="findEntry-button">Find Entry</button>
+                </div>
+
+                <div class="func1">
+                    <img src="assets/delete-black-100.png" alt="">
+                    <button class="p" id="deleteEntry-button">Delete</button> 
+
+                </div>
+                <div class="line"></div> 
+            </div>
+             
+            
+            <div class="text2">
+                <form method="post" class="create-entry" id="create-entry-part">
+                    <h1>Create Entry</h1>
+                    <h3 id="create-entry-text"></h3>
+                    <textarea name="titleOfEntry" id="title-entry" placeholder="Enter title" cols="2" rows="3"></textarea>
+                    <textarea name="newEntry" id="body-entry" placeholder="Enter contents" cols="80" rows="20"></textarea>
+                    <button type="submit" class="createNewEntry-button" id="create-entry-new">Create</button>           
+                </form>
+
+
+                <form method="get" class="find-entry" id="find-entry-part">
+                    <h1>Find Entry</h1>
+                    <h3 id="find-entry-text"></h3>
+                    <textarea name="titleOfEntry" id="find-title-entry" placeholder="Enter title" cols="70" rows="3"></textarea>
+                    <button class="findEntry-button" id="find-entry">Find Entry</button>           
+                </form>
+
+                <form method="delete" class="delete-entry" id="delete-entry-part">
+                    <h1>Delete Entry</h1>
+                    <h3 id="delete-entry-text"></h3>
+                    <textarea name="createNewEntry" id="delete-entry-diary" cols="50" rows="20"></textarea>
+                    <button class="deleteEntry-button" id="delete-entry-new">Delete Entry</button>           
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="dashboard.js"></script>
+</body> 
+</html>
