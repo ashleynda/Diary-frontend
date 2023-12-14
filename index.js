@@ -2,18 +2,12 @@
 let form = document.getElementById("signup");
 form.addEventListener('submit', () => {
     event.preventDefault();
-    clearpane();
-    document.getElementById('register').style.display = 'none';
-
     
     let email = document.querySelector("#email");
     let password = document.querySelector("#password");
-    let username = document.getElementById('#user-username');
-
-    // localStorage.setItem("Username", username.value);
 
     let signupRequest = {
-        username: email.value,
+        userName: email.value,
         password: password.value
     };
 
@@ -30,8 +24,10 @@ form.addEventListener('submit', () => {
     .then(response => response.json())
     .then(responseObject => {
         if(typeof responseObject.data !== 'string'){
+            console.log(responseObject);
             document.getElementById("signup-response").innerHTML = "Sign up Successful"
         } else{
+            console.log(responseObject);
             let response = document.getElementById("signup-response");
             response.innerHTML = responseObject.data;
             response.style.color = 'red';
@@ -42,23 +38,26 @@ form.addEventListener('submit', () => {
     })
 });
 
-let already = document.getElementsByClassName("already1");
+let already = document.getElementById("get_login");
+already.addEventListener("click", () => {
+    clearpane();
+    document.getElementById('registered').style.display = 'flex';
+})
+
 
 
 
 //login part
-let form1 = document.getElementById("login");
-form1.addEventListener('submit', () => {
+let loginForm = document.getElementById("login_form");
+loginForm.addEventListener('submit', () => {
     event.preventDefault();
     
-    clearpane();
-    document.getElementById('registered').style.display = 'none';
 
     let signinEmail = document.querySelector('#email-login');
     let signinPassword = document.querySelector('#password-login');
 
     let signinRequest = {
-        email: signinEmail.value,
+        userName: signinEmail.value,
         password: signinPassword.value
     };
 
@@ -76,6 +75,7 @@ form1.addEventListener('submit', () => {
     .then(responseObject => {
 
         if(typeof responseObject.data !== 'string'){
+            console.log(responseObject);
             document.getElementById("login-response").innerHTML = "Sign in Successful";
             localStorage.setItem('Username', signinEmail.value);
             window.location = './dashboard.html';
@@ -90,13 +90,16 @@ form1.addEventListener('submit', () => {
     })
 });
 
+
 let signupForm = document.querySelector('#sign');
 signupForm.addEventListener('click', () => {
+    clearpane()
     document.getElementById('register').style.display = 'flex';
 });
 
 let signinForm = document.querySelector('#log');
 signinForm.addEventListener('click', () => {
+    clearpane()
     document.getElementById('registered').style.display = 'flex';
    
 });

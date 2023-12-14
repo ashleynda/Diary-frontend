@@ -36,19 +36,21 @@
                 </button>
 
 
-                <div class="already">
+                
+            </form>
+            <div class="already">
                 <p class="already1">Already have an account?</p>
                 <button class="login-submit" id="login_submit" type="submit">
-                    <span class="button_text2">Login</span>
+                    <span class="button_text2" id="get_login">Login</span>
                 </button>                
-                </div>
-            </form>
+            </div>
         </div>
 
         <div class="registered" id="registered">
             <h4 id="login"></h4>
             <!-- <div class="cancel"><button id="cancel-login">&times</button></div> -->
-            <form class="login" method="post" id="login" required>
+            <div id="login-response"></div>
+            <form class="login" method="post" id="login_form" required>
                 <input type="email" name="signup_input" id="email-login" class="login-input" placeholder="Enter your email address" required>
                 <input type="password" name="signup_input" id="password-login" class="login-input" placeholder="Enter your password" required>
 
@@ -60,6 +62,7 @@
                         </label>
                         <p>Remember Me?</p>
                     </div>
+                </div>
                 <button class="login_submit1" id="form1" type="submit">Login</button>  
                 <p>Forgot password ?</p>      
             </form>
