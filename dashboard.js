@@ -2,12 +2,12 @@ let newEntry = document.querySelector('#create-entry-part');
 newEntry.addEventListener('submit', () => {
     event.preventDefault();
 
-    username = localStorage.getItem('Username');
-    title = document.getElementById('title-entry').value
-    body = document.getElementById('body-entry').value
+    let userName = localStorage.getItem('Username');
+    let title = document.getElementById('title-entry').value
+    let body = document.getElementById('body-entry').value
 
     let newEntryRequest = {
-        userId: username,
+        userId: userName,
         title: title,
         body: body
     };
@@ -25,7 +25,9 @@ newEntry.addEventListener('submit', () => {
     .then(response => response.json())
     .then(responseObject => {
         if(typeof responseObject.data !== 'string'){
-            document.getElementById("create-entry-text").innerText = responseObject.data.message;
+            document.getElementById("create-entry-text").innerHTML = "Entry created successfully";
+            // document.getElementById("create-entry-text").innerHTML = responseObject.data.message;
+            // window.location = './dashboard.html';
         } else {
             let response = document.getElementById("create-entry-text");
             response.innerHTML = responseObject.data;

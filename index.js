@@ -3,6 +3,7 @@ let form = document.getElementById("signup");
 form.addEventListener('submit', () => {
     event.preventDefault();
     
+    
     let email = document.querySelector("#email");
     let password = document.querySelector("#password");
 
@@ -45,9 +46,6 @@ already.addEventListener("click", () => {
 })
 
 
-
-
-//login part
 let loginForm = document.getElementById("login_form");
 loginForm.addEventListener('submit', () => {
     event.preventDefault();
