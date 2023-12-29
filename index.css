@@ -1,7 +1,8 @@
+@import url('https://fonts.cdnfonts.com/css/mellodi-roosthm');                
 * {
     border: none;
     scroll-behavior: smooth;
-    background: plum;
+    background: rgb(88, 47, 88);
 }
 :root {
     --color1: plum;
@@ -13,6 +14,7 @@
     display: flex;
     justify-content: right;
     gap: 14px;
+    padding: 20px;
 }
 .log {
     background: var(--color2);
@@ -32,27 +34,23 @@
     font-size: 16px;
     font-weight: 500;
 }
-.first-div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} 
 /* dia-name {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 /* } */
 
-.holder{
+/* .holder{
     display: flex;
     flex-direction: column;
     gap: 30px;
     background-color: var(--color1);
-}
+    padding: 40px;
+} */
 .name {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: var(--color3);
-    font-size: 190px;
+    font-family: 'Mellodi Roosthm', sans-serif;                                                
+    color: var(--color1);
+    font-size: 200px;
     font-weight: 500;
     font-style: oblique;
     display: flex;
@@ -63,14 +61,15 @@
     display: flex;
     gap: 140px;
     justify-content: center;
+    
 }
-/* .aim {
-    color: var(--color2);
-    font-family: ;
-    font-size: 30px;
-    font-weight: 500px;
-    font-style: italic;
-} */
+.aim {
+    color: var(--color3);
+    font-size: 25px;
+    font-weight: 300px;
+    font-style: normal;
+    margin-top: -200px;
+}
 .diary {
     display: flex;
     align-content: center;
@@ -79,24 +78,25 @@
 .diary-pic {
     display: flex;
     align-content: center;
-    width: 550px;
-    /* max-height: 800px; */
+    width: 590px;
+    padding: 50px 20px;
 } 
 .register {
-    background: rgb(49, 1, 50);
-    width: 500px;
-    max-height: 400px;
+    /* background: rgb(49, 1, 50); */
+    background-color:azure;
     position: absolute;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding: 260px 20px;
     margin-left: 650px;
-    border-radius: 8px;    
+    border-radius: 8px;   
+    margin-top: -920px; 
     display: none;
 }
 #signup-response {
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
     color: aliceblue;
     display: flex;
     align-items: center;
@@ -107,55 +107,68 @@
 
 }
 .signup {
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
     display: flex;
     align-content: center;
     justify-content: right;
     flex-direction: column;
+    gap: 20px;
 
 }
 .signup-input {
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
     font-size: 25px;
-    border: solid 4px black;
+    border: solid 2px black;
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 10px 60px;
 }
 .signup-submit {
-    /* background-color: rgb(49, 1, 50); */
-    background-color: var(--color3);
-    padding: 10px;
-    text-align: center;
+    /* background-color: var(--color2); */
+    width: 150px;
+    height: 45px;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    color: white;  
+    
 }
 
 .signup-submit:hover{
-    background-color: darkmagenta;
+    background-color: rgb(142, 67, 142);
 }
 
-.button-text {
+/* .button-text {
     /* background-color: rgb(49, 1, 50); */
-    background: none;
+    /* background: none;
     color: var(--color2);
     border-radius: 10px;
     font-size: 26px;
     font-weight: 500;
     line-height: 16px;
-}
+    border-radius: 8px; */
+/* } */
 .already {
     display: flex;
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
+
 }
-.already p {
-    background-color: rgb(49, 1, 50);
+.already1 {
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
     font-size: 26px;
     font-weight: 500;
     line-height: 150px;
-    color: yellowgreen;
+    color: black
     
 }
 .login-submit {
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -163,9 +176,10 @@
     /* background-color: blue; */
 } 
 .button_text2 {
-    background-color:rgb(49, 1, 50);
+    /* background-color:rgb(49, 1, 50); */
     /* background-color: var(--color2); */
-    color: black;
+    background-color: azure;
+    color: rgb(171, 50, 205); 
     font-size: 28px;
     font-weight: 600;
     line-height: 26px;
@@ -175,40 +189,54 @@
     gap: 120px;
 }
 .registered {
-    background: rgb(49, 1, 50);
-    width: 500px;
-    max-height: 400px;
+    background-color: azure;
     position: absolute;
     display: flex;
     justify-content: center;
     padding: 260px 20px;
-    /* margin-left: 250px; */
+    margin-left: 650px;
     border-radius: 8px;  
     flex-direction: column;
+    margin-top: -920px;
     display: none;
 }
+#login-response {
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+}
 .login {
-    background: rgb(49, 1, 50);
+    /* background: rgb(49, 1, 50); */
+    background-color: azure;
     display: flex;
     align-items: center;
     justify-content: right;
     flex-direction: column;
+    gap: 20px;
 }
 .login-input {
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
     font-size: 25px;
-    border: solid 4px black;
+    border: solid 2px black;
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 10px 60px;    
 }
 .forgot {
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
 }
 .check {
     display: flex;
     gap: 8px;
-    background-color: rgb(49, 1, 50);
+    background-color: azure;
 }
 .container {
     display: block;
@@ -221,7 +249,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background: rgb(49, 1, 50);
+    /* background: rgb(49, 1, 50); */
+    background-color: azure;
 }
 .container input {
     position: absolute;
@@ -263,7 +292,8 @@
     transform: rotate(45deg);
 }
 .forgot p {
-    background-color: rgb(49, 1, 50);
+    /* background-color: rgb(49, 1, 50); */
+    background-color: azure;
     color: blueviolet;
     font-size: 25px;
     font-weight: 500;
@@ -271,15 +301,25 @@
     margin-top: -4px;
 }  
 .login_submit1 {
-    background-color: var(--color3);
+    background-color: var(--color2);
     width: 150px;
     height: 45px;
     border-radius: 10px;
+    font-size: 25px;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
 }
-.button_text1 {
+/* .button_text1 {
     font-size: 28px;
     font-weight: 500;
     font-style: normal;
     background: none;
+} */
+.password-forgot {
+    background-color: azure;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
 }
 

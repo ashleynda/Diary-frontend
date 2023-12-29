@@ -1,3 +1,8 @@
+#page {
+    border: none;
+    scroll-behavior: smooth;
+    background: rgb(88, 47, 88);
+}
 .header {
     display: flex;
     align-items: center;
@@ -10,23 +15,51 @@
     line-height: 24px;
     font-style: normal;
 }
+.exit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;    
+}
 .vertical-line {
     border: none; /* Removes default border */
     height: 2px; /* Height of the line */
     background-color: black; /* Color of the line */
     margin: 20px 0; 
 }
-/* .functions {
-     
-} */
+.text1 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 570px;
+}
+.functions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+.func1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
 .p {
-    color: blue;
+    color: rgb(129, 122, 133);
     font-size: 24px;
     font-weight: 600;
     font-style: oblique;
     line-height: 24px;
-    background-color: white;
+    background-color: rgb(88, 47, 88);
     border: none;
+}
+.p:hover {
+    color: var(--color2);
 }
 .line {
     border-right: 4px solid black;
@@ -36,32 +69,43 @@
     margin-left: 200px;
     /* float: right; */
 }
-.text1 {
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    gap: 570px;
-}
+/* .text2 {
+    display: none;
+} */
 .create-entry {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-direction: column;
     display: none;
+    gap: 10px;
 }
-#title-entry {
-    margin-bottom: 30px;
-    padding: 10px 10px;
-}
-
 .createNewEntry-button {
-    background-color: blueviolet;
+    background-color: rgb(129, 122, 133);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    width: 150px;      
+}
+.update-entry {
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    display: none;
+    gap: 10px;
+}
+.updtaeNewEntry-button {
+    background-color: rgb(129, 122, 133);
     border-radius: 8px;
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
     width: 150px;
-    display: flex;
-   
 }
 .find-entry {
     display: none;
@@ -69,10 +113,10 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 .findEntry-button {
-    background-color: blueviolet;
+    background-color: rgb(129, 122, 133);
     border-radius: 8px;
     font-size: 20px;
     font-weight: 400;
@@ -85,10 +129,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+    display: none;
 }
 .deleteEntry-button {
-    background-color: blueviolet;
+    background-color: rgb(129, 122, 133);
     border-radius: 8px;
     font-size: 20px;
     font-weight: 400;

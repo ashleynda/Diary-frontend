@@ -10,9 +10,10 @@
     <section id="page">
         <div class="header">
             <h1 class="head">Dashboard</h1>
-            <div>
+            <div class="exit">
+                <img class="log-out" id="logout" src="assets/icons8-logout-50.png" alt="">
                 <button class="log-out" id="logout">
-                    <img src="" alt="">Logout
+                    Logout
                 </button>
             </div>
         </div>
@@ -49,11 +50,18 @@
                 <form method="post" class="create-entry" id="create-entry-part">
                     <h1>Create Entry</h1>
                     <h3 id="create-entry-text"></h3>
-                    <textarea name="titleOfEntry" id="title-entry" placeholder="Enter title" cols="2" rows="3"></textarea>
+                    <textarea name="titleOfEntry" id="title-entry" placeholder="Enter title" cols="80" rows="5"></textarea>
                     <textarea name="newEntry" id="body-entry" placeholder="Enter contents" cols="80" rows="20"></textarea>
                     <button type="submit" class="createNewEntry-button" id="create-entry-new">Create</button>           
                 </form>
 
+                <form method="patch" class="update-entry" id="update-entry-part">
+                    <h1>Update Entry</h1>
+                    <h3 id="update-entry-text"></h3>
+                    <textarea name="titleOfUpdate" id="update-title" placeholder="Enter title" cols="80" rows="5"></textarea>
+                    <textarea name="updateEntry" id="update-body" placeholder="Enter contents" cols="80" rows="20"></textarea>
+                    <button type="submit" class="updateNewEntry-button" id="update-entry-new">Update</button>           
+                </form>
 
                 <form method="get" class="find-entry" id="find-entry-part">
                     <h1>Find Entry</h1>
@@ -65,7 +73,7 @@
                 <form method="delete" class="delete-entry" id="delete-entry-part">
                     <h1>Delete Entry</h1>
                     <h3 id="delete-entry-text"></h3>
-                    <textarea name="createNewEntry" id="delete-entry-diary" cols="50" rows="20"></textarea>
+                    <textarea name="createNewEntry" id="delete-entry-diary" cols="50" rows="10"></textarea>
                     <button class="deleteEntry-button" id="delete-entry-new">Delete Entry</button>           
                 </form>
             </div>
