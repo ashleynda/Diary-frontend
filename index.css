@@ -322,4 +322,37 @@
     font-weight: 400;
     font-style: normal;
 }
+@media screen and (max-width: 728px) {
+    #first-div {
+        display: none;
+    }
+    .first-div_1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        /* margin-top: -120px; */
+    }
+    .dia-name {
+        padding: 30px;
+        padding-right: 170px;
+        margin-top: -100px;
+    }
+    .name {
+        font-size: 80px;
+    }
+    .aim {
+        color: var(--color3);
+        font-size: 12px;
+        font-weight: 300px;
+        font-style: normal;
+        margin-top: -100px;
+    }
+    .diary-pic {
+        display: flex;
+        align-content: center;
+        width: 400px;
+    }
+    
+}
 

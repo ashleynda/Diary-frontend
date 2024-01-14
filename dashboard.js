@@ -2,7 +2,7 @@ let newEntry = document.querySelector('#create-entry-part');
 newEntry.addEventListener('submit', () => {
     event.preventDefault();
 
-    clearpane();
+    // clearpane();
 
     userName = localStorage.getItem('Username');
     title = document.getElementById('title-entry').value
@@ -45,16 +45,19 @@ updateEntry.addEventListener('submit', () => {
     event.preventDefault();
 
     let userName = localStorage.getItem('Username');
-    let title = document.getElementById('update-title').value;
-    let body = document.getElementById('update-body').value;
+    let title = document.getElementById('old-title').value;
+    let newTitle = document.getElementById('new-title').value;
+    let body = document.getElementById('new-body').value;
 
     let updateEntryRequest = {
         userName: userName,
         title: title,
+        newTitle: newTitle,
         body: body
     };
+    console.log(updateEntryRequest);
 
-    const updateEntryUrl = 'http://localhost:8080/Journal/updateEntry';
+    const updateEntryUrl = 'http://localhost:8080/Journal/update-entry';
     fetch(updateEntryUrl, {
         method: 'PATCH',
         body: JSON.stringify(updateEntryRequest),
@@ -65,13 +68,13 @@ updateEntry.addEventListener('submit', () => {
     .then(response => response.json())
     .then(responseObject => {
         console.log(responseObject)
-        if(typeof responseObject.data !== 'string'){
-            document.getElementById("update-entry-text").innerText = "responseObject.data.message";
-        } else {
-            let response = document.getElementById("update-entry-text");
-            response.innerHTML = responseObject.data;
-            response.style.color = 'red';
-        }
+        // if(typeof responseObject.data !== 'string'){
+            document.getElementById("update-entry-text").innerText = responseObject.data.message;
+        // } else {
+        //     let response = document.getElementById("update-entry-text");
+        //     response.innerHTML = responseObject.data;
+        //     response.style.color = 'red';
+        // }
     })
     .catch(error => {
         console.error('Error:', error);
@@ -81,7 +84,6 @@ updateEntry.addEventListener('submit', () => {
 let findEntry = document.querySelector("#find-entry-part");
 findEntry.addEventListener('submit', () => {
     event.preventDefault();
-    clearpane();
    
     userName = localStorage.getItem('Username');
     title = document.getElementById('find-title-entry').value;
@@ -100,7 +102,23 @@ findEntry.addEventListener('submit', () => {
     })
     .then(response => response.json())
     .then(responseObject => {
-        console.log(responseObject)
+        const {title, body } = responseObject.data;
+
+        const newParagraph = document.createElement('p');
+
+        newParagraph.textContent = `${title}: ${body}`;
+        const returnResponse = document.querySelector("#find-entry-text");
+        returnResponse.appendChild(newParagraph);
+
+        // const entryName = document.getElementById("entry-name");
+        const dashboardTitleElement = document.getElementById("dashboard-title");
+        const dashboardBodyElement = document.getElementById("dashboard-body");
+
+        // entryName.textContent = `Username: ${userName}`;
+        dashboardTitleElement.textContent = `Title: ${title}`;
+        dashboardBodyElement.textContent = `Body: ${body}`;
+        console.log(newParagraph)
+
         if(typeof responseObject.data !== 'string'){
             document.getElementById("find-entry-text").innerText = "Entry found successfully";
         } else {
@@ -114,44 +132,87 @@ findEntry.addEventListener('submit', () => {
     })
 });
 
-let deleteEntry = document.querySelector("#delete-entry-part");
-deleteEntry.addEventListener('submit', () => {
-    event.preventDefault();
-    clearpane();
+// let deleteEntry = document.querySelector("#delete-entry-part");
+// deleteEntry.addEventListener('submit', () => {
+//     event.preventDefault();
+//     // clearpane();
 
 
-    userName = localStorage.getItem('Username');
-    title = document.getElementById('title-entry').value;
+//     userName = localStorage.getItem('Username');
+//     title = document.getElementById('delete-entry-diary').value;
 
-    let deleteEntryRequest = {
-        userName: userName,
-        title: title
-    };
+//     let deleteEntryRequest = {
+//         userName: userName,
+//         title: title
+//     };
 
-    const deleteEntryUrl = 'http://localhost:8080/Journal/delete';
+//     const deleteEntryUrl = 'http://localhost:8080/Journal/delete-entry';
 
-    fetch(deleteEntryUrl, {
-        method: 'DELETE',
-        body: JSON.stringify(deleteEntryRequest),
-        headers: {
-            'Content-Type': 'application/json; charset=UTF-8'
-        },
-    })
-    .then(response => response.json())
-    .then(responseObject => {
-        console.log(responseObject);        
-        if(typeof responseObject.data !== 'string'){
-            document.getElementById("delete-entry-text").innerHTML = "Deleted successfully";
-        } else {
-            let response = document.getElementById("delete-entry-text");
-            response.innerHTML = responseObject.data;
-            response.style.color = 'red';
-        } 
-    })       
-    .catch(error => {
-        console.error('Error:', error)
-    })  
+//     fetch(deleteEntryUrl, {
+//         method: 'DELETE',
+//         body: JSON.stringify(deleteEntryRequest),
+//         headers: {
+//             'Content-Type': 'application/json; charset=UTF-8'
+//         },
+//     })
+//     console.log("i got here")
+//     .then(response => response.json())
+//     .then(responseObject => {
+//         console.log(responseObject); 
+//         document.getElementById("delete-entry-text").innerText = responseObject.data.message;       
+//     })       
+//     .catch(error => {
+//         console.error('Error:', error)
+//     })  
+// });
+// Wait for the DOM to load before querying elements
+document.addEventListener('DOMContentLoaded', () => {
+    let deleteEntry = document.querySelector("#delete-entry-part");
+
+    if (deleteEntry) {
+        deleteEntry.addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            try {
+                let userName = localStorage.getItem('Username');
+                let title = document.getElementById('delete-entry-diary').value;
+
+                let deleteEntryRequest = {
+                    userName: userName,
+                    title: title
+                };
+
+                const deleteEntryUrl = 'http://localhost:8080/Journal/delete-entry';
+
+                const response = await fetch(deleteEntryUrl, {
+                    method: 'DELETE',
+                    body: JSON.stringify(deleteEntryRequest),
+                    headers: {
+                        'Content-Type': 'application/json; charset=UTF-8'
+                    },
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                // Inside your fetch response handling
+                const responseObject = await response.json();
+                if (responseObject.data && responseObject.data.message === 'No value present') {
+                    // Handle the case where no value is present or the entry doesn't exist
+                    document.getElementById("delete-entry-text").innerText = "The entry doesn't exist or has already been deleted.";
+                } else {
+                    // Handle other responses or successful deletion
+                    console.log(responseObject);
+                    document.getElementById("delete-entry-text").innerText = "Entry deleted successfully.";
+                }
+            } catch (error) {
+                console.error('Error:', error);
+            }            
+        });
+    }
 });
+
 
 let newEntryForm = document.querySelector('#createNewEntry-button');
 newEntryForm.addEventListener('click', () => {
