@@ -22,6 +22,16 @@
     flex-direction: column;
     gap: 8px;    
 }
+.log-out {
+    background-color: rgb(88, 47, 88);
+    border: none;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+.log-out:hover {
+    color: azure;
+}
 .vertical-line {
     border: none; /* Removes default border */
     height: 2px; /* Height of the line */

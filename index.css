@@ -324,7 +324,27 @@
 }
 @media screen and (max-width: 728px) {
     #first-div {
-        display: none;
+        display: flex;
+    }
+    .log {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    .sign {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+    }
+    .log:hover {
+        color: black;
+    }
+    .sign:hover {
+        color: black;
     }
     .first-div_1 {
         display: flex;

@@ -10,7 +10,7 @@
     <section id="page">
       <div class="header">
         <h1 class="head">Dashboard</h1>
-        <div class="exit">
+        <div class="exit" id="logout">
           <img
             class="log-out"
             id="logout"
@@ -86,7 +86,7 @@
             <textarea
               name="titleOfUpdate"
               id="new-title"
-              placeholder="Enter title"
+              placeholder="Enter new title"
               cols="80"
               rows="5"
             ></textarea>
@@ -108,8 +108,7 @@
 
           <form method="get" class="find-entry" id="find-entry-part">
             <h1>Find Entry</h1>
-            <h3 id="find-entry-text"></h3>
-            <!-- <h4 id="entry-name"></h4> -->
+            <h3 id="find-entry-text"></h3>            
             <h4 id="dashboard-title"></h4>
             <h4 id="dashboard-body"></h4>
             <textarea
