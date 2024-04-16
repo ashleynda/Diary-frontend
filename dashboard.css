@@ -1,7 +1,7 @@
 #page {
     border: none;
     scroll-behavior: smooth;
-    background: rgb(88, 47, 88);
+    background: rgb(77, 107, 206);
 }
 .header {
     display: flex;
@@ -12,31 +12,33 @@
     font-size: 26px;
     font-weight: 900;
     margin-bottom: -20px;
-    line-height: 24px;
+    line-height: 2vh;
     font-style: normal;
+    padding: 10px 10px;
 }
 .exit{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 8px;    
+    gap: 8px;  
+    padding: 0px 15px;  
 }
 .log-out {
-    background-color: rgb(88, 47, 88);
+    background-color: rgb(77, 107, 206);
     border: none;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
+    width: 3vw;
 }
 .log-out:hover {
     color: azure;
 }
 .vertical-line {
     border: none; /* Removes default border */
-    height: 2px; /* Height of the line */
+    height: 1vh; /* Height of the line */
     background-color: black; /* Color of the line */
-    margin: 20px 0; 
 }
 .text1 {
     display: flex;
@@ -60,12 +62,12 @@
     gap: 10px;
 }
 .p {
-    color: rgb(129, 122, 133);
+    color: black;
     font-size: 24px;
     font-weight: 600;
     font-style: oblique;
     line-height: 24px;
-    background-color: rgb(88, 47, 88);
+    background-color: rgb(77, 107, 206);
     border: none;
 }
 .p:hover {
@@ -73,7 +75,7 @@
 }
 .line {
     border-right: 4px solid black;
-    height: 800px;
+    height: 100vh;
     width: 2%;
     margin-top: -700px;
     margin-left: 200px;
@@ -85,10 +87,11 @@
 .create-entry {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     display: none;
     gap: 10px;
+    margin-left: -200px;
 }
 .createNewEntry-button {
     background-color: rgb(129, 122, 133);
@@ -97,25 +100,26 @@
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    width: 150px;      
+    width: 10vw;      
 }
 .update-entry {
-    /* display: none; */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     display: none;
     gap: 10px;
+    margin-left: -200px;
+    margin-top: -20px;
 }
-.updtaeNewEntry-button {
+.updateNewEntry-button {
     background-color: rgb(129, 122, 133);
     border-radius: 8px;
     font-size: 20px;
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    width: 150px;
+    width: 10vw;
 }
 .find-entry {
     display: none;
@@ -124,6 +128,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+    margin-left: -200px;
 }
 .findEntry-button {
     background-color: rgb(129, 122, 133);
@@ -132,7 +137,7 @@
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    width: 150px;
+    width: 10vw;
 }
 .delete-entry {
     display: flex;
@@ -141,6 +146,7 @@
     flex-direction: column;
     gap: 20px;
     display: none;
+    margin-left: -200px;
 }
 .deleteEntry-button {
     background-color: rgb(129, 122, 133);
@@ -149,8 +155,6 @@
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    width: 150px;
+    width: 10vw;
 }
-@media screen and (max-width: 728px) {
-    
-}
+

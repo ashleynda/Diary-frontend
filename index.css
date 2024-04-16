@@ -1,8 +1,10 @@
 @import url('https://fonts.cdnfonts.com/css/mellodi-roosthm');                
-* {
+.holder {
     border: none;
     scroll-behavior: smooth;
-    background: rgb(88, 47, 88);
+    background: rgb(77, 107, 206);
+    height: 96vh;
+    /* padding: 20px 80px; */
 }
 :root {
     --color1: plum;
@@ -17,28 +19,31 @@
     padding: 20px;
 }
 .log {
-    background: var(--color2);
+    background:black;
     color: var(--color3);
-    width: 80px;
-    height: 29px;
+    width: 5vw;
+    height: 4vh;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 500;
+    border: none;
 }
 .sign {
-    background: var(--color3);
-    color: var(--color2);
-    width: 80px;
-    height: 29px;
+    background: white;
+    color: black;
+    width: 5vw;
+    height: 4vh;
     border-radius: 10px;
     font-size: 16px;
     font-weight: 500;
+    border: none;
 }
 /* dia-name {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-/* } */
+    margin-top: -200px;
+} */
 
 /* .holder{
     display: flex;
@@ -49,7 +54,7 @@
 } */
 .name {
     font-family: 'Mellodi Roosthm', sans-serif;                                                
-    color: var(--color1);
+    color: black;
     font-size: 200px;
     font-weight: 500;
     font-style: oblique;
@@ -61,6 +66,7 @@
     display: flex;
     gap: 140px;
     justify-content: center;
+    margin-top: -50px;
     
 }
 .aim {
@@ -78,25 +84,26 @@
 .diary-pic {
     display: flex;
     align-content: center;
-    width: 590px;
+    width: 30vw;
     padding: 50px 20px;
 } 
 .register {
-    /* background: rgb(49, 1, 50); */
-    background-color:azure;
-    position: absolute;
+    background-color:white;
     display: flex;
+    align-content: center;
     justify-content: center;
     flex-direction: column;
-    padding: 260px 20px;
-    margin-left: 650px;
+    margin-left: 50px;
     border-radius: 8px;   
-    margin-top: -920px; 
     display: none;
+    height: 60vh;
+    margin-top: -690px;
+    padding: 40px 20px 40px 20px;
+    position: absolute;
 }
 #signup-response {
     /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
+    /* background-color: azure; */
     color: aliceblue;
     display: flex;
     align-items: center;
@@ -108,7 +115,7 @@
 }
 .signup {
     /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
+    /* background-color: azure; */
     display: flex;
     align-content: center;
     justify-content: right;
@@ -118,15 +125,16 @@
 }
 .signup-input {
     /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
+    /* background-color: azure; */
     font-size: 25px;
     border: solid 2px black;
     margin-bottom: 15px;
     border-radius: 10px;
-    padding: 10px 60px;
+    padding: 4px 20px;
+    width: 20vw;
 }
 .signup-submit {
-    /* background-color: var(--color2); */
+    background-color: rgb(77, 107, 206);
     width: 150px;
     height: 45px;
     border-radius: 10px;
@@ -134,11 +142,16 @@
     font-weight: 400;
     font-style: normal;
     color: white;  
-    
+    display: flex; 
+    align-self: center;
+    justify-content: center;
+    text-align: center;  
+    line-height: 42px;
+    border: none;  
 }
 
 .signup-submit:hover{
-    background-color: rgb(142, 67, 142);
+    background-color: rgb(77, 107, 206);
 }
 
 /* .button-text {
@@ -153,13 +166,8 @@
 /* } */
 .already {
     display: flex;
-    /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
-
 }
 .already1 {
-    /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
     font-size: 26px;
     font-weight: 500;
     line-height: 150px;
@@ -167,19 +175,15 @@
     
 }
 .login-submit {
-    /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
     display: flex;
     align-content: center;
     justify-content: center;
     margin-bottom: -20px;
-    /* background-color: blue; */
+    border: none;
+    background-color: white;
 } 
 .button_text2 {
-    /* background-color:rgb(49, 1, 50); */
-    /* background-color: var(--color2); */
-    background-color: azure;
-    color: rgb(171, 50, 205); 
+    color: rgb(77, 107, 206);
     font-size: 28px;
     font-weight: 600;
     line-height: 26px;
@@ -189,20 +193,22 @@
     gap: 120px;
 }
 .registered {
-    background-color: azure;
+    background-color: white;
     position: absolute;
     display: flex;
+    align-content: center;
     justify-content: center;
-    padding: 260px 20px;
-    margin-left: 650px;
+    padding: 40px 20px 40px 20px;
+    margin-left: 50px;
     border-radius: 8px;  
     flex-direction: column;
-    margin-top: -920px;
+    margin-top: -690px;
     display: none;
+    height: 60vh;    
 }
 #login-response {
     /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
+    /* background-color: azure; */
     color: aliceblue;
     display: flex;
     align-items: center;
@@ -213,7 +219,7 @@
 }
 .login {
     /* background: rgb(49, 1, 50); */
-    background-color: azure;
+    /* background-color: azure; */
     display: flex;
     align-items: center;
     justify-content: right;
@@ -221,22 +227,20 @@
     gap: 20px;
 }
 .login-input {
-    /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
     font-size: 25px;
     border: solid 2px black;
     margin-bottom: 15px;
     border-radius: 10px;
-    padding: 10px 60px;    
+    padding: 4px 20px;    
 }
 .forgot {
     /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
+    /* background-color: azure; */
 }
 .check {
     display: flex;
     gap: 8px;
-    background-color: azure;
+    /* background-color: azure; */
 }
 .container {
     display: block;
@@ -250,7 +254,7 @@
     -ms-user-select: none;
     user-select: none;
     /* background: rgb(49, 1, 50); */
-    background-color: azure;
+    /* background-color: azure; */
 }
 .container input {
     position: absolute;
@@ -293,15 +297,15 @@
 }
 .forgot p {
     /* background-color: rgb(49, 1, 50); */
-    background-color: azure;
-    color: blueviolet;
+    /* background-color: azure; */
+    color: rgb(77, 107, 206);
     font-size: 25px;
     font-weight: 500;
     font-style: normal;
     margin-top: -4px;
 }  
 .login_submit1 {
-    background-color: var(--color2);
+    background-color: rgb(77, 107, 206);
     width: 150px;
     height: 45px;
     border-radius: 10px;
@@ -317,62 +321,12 @@
     background: none;
 } */
 .password-forgot {
-    background-color: azure;
+    /* background-color: azure; */
     font-size: 15px;
     font-weight: 400;
     font-style: normal;
 }
-@media screen and (max-width: 728px) {
-    #first-div {
-        display: flex;
-    }
-    .log {
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-    }
-    .sign {
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-    }
-    .log:hover {
-        color: black;
-    }
-    .sign:hover {
-        color: black;
-    }
-    .first-div_1 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        /* margin-top: -120px; */
-    }
-    .dia-name {
-        padding: 30px;
-        padding-right: 170px;
-        margin-top: -100px;
-    }
-    .name {
-        font-size: 80px;
-    }
-    .aim {
-        color: var(--color3);
-        font-size: 12px;
-        font-weight: 300px;
-        font-style: normal;
-        margin-top: -100px;
-    }
-    .diary-pic {
-        display: flex;
-        align-content: center;
-        width: 400px;
-    }
+
     
-}
+
 
